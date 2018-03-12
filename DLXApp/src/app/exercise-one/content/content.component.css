@@ -1,0 +1,10 @@
+.content {
+    float: left;
+    width: 75%;
+    height: 500px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: #FFC64A;
+    padding-top: 240px;
+}
