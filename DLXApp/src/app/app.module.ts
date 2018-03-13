@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FirstmoduleModule } from './firstmodule/firstmodule.module';
 import { ExerciseOneModule } from './exercise-one/exercise-one.module';
+import { ExerciseTwoModule } from './exercise-two/exercise-two.module';
 
 
 import { AppComponent } from './app.component';
 import { FirstcomponentComponent } from './firstcomponent/firstcomponent.component';
+
 
 
 @NgModule({
@@ -14,7 +16,10 @@ import { FirstcomponentComponent } from './firstcomponent/firstcomponent.compone
     FirstcomponentComponent
   ],
   imports: [
-    BrowserModule, FirstmoduleModule, ExerciseOneModule
+    BrowserModule, 
+    FirstmoduleModule,
+    ExerciseOneModule,  
+    ExerciseTwoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
