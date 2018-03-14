@@ -1,0 +1,14 @@
+<h2 class="text-center my-4">Oneway Binding</h2>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="itpl">Interpolation:</label>
+      <input type="text" class="form-control" id="itpl" value="{{content1}}" placeholder="type something ...">
+    </div>
+    <div class="form-group">
+      <label for="itpl1">Interpolation:</label>
+      <input type="text" class="form-control" id="itpl1" value="" placeholder="type something ..." (change)="ChangeData()">
+      <div>This is Interpolation (press enter): {{content2}}</div>
+    </div>
+  </form>
+</div>

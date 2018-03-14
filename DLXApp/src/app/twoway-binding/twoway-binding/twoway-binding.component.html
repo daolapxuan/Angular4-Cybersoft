@@ -1,0 +1,13 @@
+<h2 class="text-center my-4">Twoway Binding</h2>
+<div class="container">
+  <div class="form-inline">
+    <label for="fname">First Name: </label>
+    <input type="text" class="w-25 form-control mx-3" id="fname" [(ngModel)]="fname">
+    <label for="lname">Last Name: </label>
+    <input type="text" class="w-25 form-control mx-3" id="lname" [(ngModel)]="lname">
+  </div>
+  <div class="form-group form-block">
+    <label for="fullname">Full Name: </label>
+    <input type="text" class="w-50 form-control mx-3" id="fullname" value="{{fname}} {{lname}}">
+  </div>
+</div>
