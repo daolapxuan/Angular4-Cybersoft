@@ -1,0 +1,12 @@
+.colorText {
+    color: pink; 
+}
+.backgroundText {
+    background: gray;
+}
+.sizeText {
+    font-size: 20px;
+}
+.fontText {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

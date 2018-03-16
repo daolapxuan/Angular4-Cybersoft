@@ -1,0 +1,18 @@
+<h5>- Duyệt mảng Object:</h5>
+<div *ngFor="let item of workerList">{{item.name}} - {{item.age}}</div>
+<h5>- Duyệt mảng thông thường:</h5>
+<ul>Danh sách tên:
+  <li *ngFor="let name of names; let stt=index">{{stt}} - {{name}}</li>
+</ul>
+<h5>- Nhập danh sách nhân viên:</h5>
+<div class="form-inline">
+  <label for="name">Nhập Họ Tên:</label>
+  <input type="text" class="form-control mx-3" id="name" placeholder="Nhập tên" #name>
+  <label for="id">Nhập MSNV:</label>
+  <input type="text" class="form-control mx-3" id="id" placeholder="Nhập MSNV" #workerid>
+  <button type="button" class="btn btn-success" (click)="SaveData(name, workerid)">Lưu</button>
+</div>
+<h5 class="mt-3">Danh sách nhân viên đã nhập:</h5>
+<ul>
+  <li></li>
+</ul>

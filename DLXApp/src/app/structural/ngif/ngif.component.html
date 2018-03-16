@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- ngIf ẩn hiện theo true false -->
+  <div class="display-3" *ngIf="onoff">
+    This is a text ....
+  </div>
+  <button type="button" class="btn btn-primary mx-4 my-4" (click)="Show()">Show</button>
+  <button type="button" class="btn btn-danger" (click)="Hide()">Hide</button>
+
+  <!-- ngIf ẩn hiện khi so sánh với một giá trị -->
+  <div class="form-inline">
+    <label for="number">Nhập một số:</label>
+    <input class="form-control w-25 mx-4" id="number" type="text" #num>
+    <button type="button" class="btn btn-outline-dark mr-2" (click)="Check(num)">Kiểm tra</button>
+    <div *ngIf="(number>0)">Số vừa nhập là số dương!</div>
+  </div>
+
+  <!-- ngIf else và ng-template
+  Lấy ví dụ trên, ta thêm else vào để in ra câu "Số vừa nhập là số âm" -->
+  <div class="mt-4 form-inline">
+    <label for="number1">Nhập một số:</label>
+    <input class="form-control w-25 mx-4" id="number1" type="text" #num1>
+    <button type="button" class="btn btn-outline-dark mr-2" (click)="Check1(num1)">Kiểm tra</button>
+    <div *ngIf="state"> <!-- Ẩn kết quả khi chưa nhập hoặc nhập vào không phải là chữ số -->
+      <div *ngIf="(number1>0); else ElseContent">Số vừa nhập là số dương!</div> <!-- Dùng Else để trả về kết quả ngược lại -->
+      <ng-template #ElseContent> <!-- ng-template dùng để hiển thị phần else -->
+        Số vừa nhập là số âm!
+      </ng-template>
+    </div>
+  </div>
+
+</div>
