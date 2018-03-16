@@ -1,0 +1,6 @@
+<p>
+  {{list}}
+</p>
+<button type="button" class="btn btn-outline-success" [disabled]="voted" (click)="Vote(true)">Agree</button>
+<button type="button" class="btn btn-outline-danger" [disabled]="voted" (click)="Vote(false)">Disagree</button>
+Result: {{voted}}
