@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <form #myForm="ngForm" (ngSubmit)="register(myForm.value)">
+    <div class="form-group">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <input class="form-control w-input mr-input" type="text" minlength="6" maxlength="50" placeholder="First Name" id="fname"
+            name="fname" #fname="ngModel" ngModel required>
+          <div *ngIf="fname.errors && (fname.dirty || fname.touched)" class="badge badge-danger">
+            <div *ngIf="fname.errors.required">First Name Không được rỗng!</div>
+            <div *ngIf="(fname.errors.minlength || fname.errors.maxlength)" class="badge badge-danger">
+              Độ dài từ 6-50 kí tự!
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-6">
+          <input class="form-control w-input ml-input" type="text" minlength="6" maxlength="50" placeholder="Last Name" id="lname" name="lname" #lname="ngModel"
+            ngModel required>
+          <div *ngIf="lname.errors && (lname.dirty || lname.touched)" class="badge badge-danger ml-input">
+            <div *ngIf="lname.errors.required">Last Name Không được rỗng!</div>
+            <div *ngIf="(lname.errors.minlength || lname.errors.maxlength)" class="badge badge-danger">
+              Độ dài từ 6-50 kí tự!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" minlength="6" maxlength="50" placeholder="Display Name" id="dname" name="dname" #dname="ngModel" ngModel required>
+      <div *ngIf="dname.errors && (dname.dirty || dname.touched)" class="badge badge-danger">
+        <div *ngIf="dname.errors.required">Display Name Không được rỗng!</div>
+        <div *ngIf="(dname.errors.minlength || dname.errors.maxlength)" class="badge badge-danger">
+          Độ dài từ 6-50 kí tự!
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="email" minlength="6" maxlength="50" placeholder="Email Address" id="email" name="email" #email="ngModel" ngModel required>
+      <div *ngIf="email.errors && (email.dirty || email.touched)" class="badge badge-danger">
+          <div *ngIf="email.errors.required">Display Name Không được rỗng!</div>
+          <div *ngIf="(email.errors.minlength || email.errors.maxlength)" class="badge badge-danger">
+            Độ dài từ 6-50 kí tự!
+          </div>
+        </div>
+    </div>
+    <div class="form-group">
+
+      <div class="row">
+        <div class="col-sm-6">
+          <input class="form-control w-input mr-input" type="password" placeholder="Password" id="pw" name="pw" #pw="ngModel" ngModel
+            required>
+        </div>
+        <div class="col-sm-6">
+          <input class="form-control w-input ml-input" type="password" placeholder="Confirm Password" name="cpw" id="cpw" #cpw="ngModel"
+            ngModel required>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <input class="form-control btn btn-primary w-input mr-input" type="button" value="Register">
+      </div>
+      <div class="col-sm-6">
+        <input class="form-control btn btn-success w-input ml-input" type="button" value="Sign In">
+      </div>
+    </div>
+
+
+
+  </form>
+</div>

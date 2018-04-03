@@ -3,18 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { InputComponent } from './input/input.component';
-import { OutputComponent } from './output/output.component';
+import { FormValidationModule } from './form-validation/form-validation.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
-    OutputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormValidationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
