@@ -7,6 +7,8 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lesson 4: Input, Output and Viewchild';
+
+  // Hai biến đếm số lượng vote Agree và Disagree
   numberOfAgree: number = 0;
   numberOfDisagree: number = 0;
 
